@@ -28,12 +28,12 @@
 
 <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,25,59,.08)">
   <nav style="max-width:1220px;margin:0 auto;padding:0 26px;height:76px;display:flex;align-items:center;gap:26px">
-    <a href="Clearlake Audit.dc.html" style="display:flex;align-items:center;flex:none" aria-label="Clearlake Audit"><img src="assets/clearlake-logo.png" alt="Clearlake Audit" style="height:52px;width:auto;display:block"/></a>
+    <a href="index.html" style="display:flex;align-items:center;flex:none" aria-label="Clearlake Audit"><img src="assets/clearlake-logo.png" alt="Clearlake Audit" style="height:52px;width:auto;display:block"/></a>
     <div style="flex:1"></div>
     <div style="display:none;gap:15px;align-items:center;font-size:14px;font-weight:600" data-desktopnav>
-      <a href="Clearlake Audit.dc.html" data-i18n="nav_home" style="color:#28345f;padding:6px 0">Főoldal</a>
+      <a href="index.html" data-i18n="nav_home" style="color:#28345f;padding:6px 0">Főoldal</a>
       <div style="position:relative;padding:26px 0" onMouseEnter="{{ openMega }}" onMouseLeave="{{ closeMega }}">
-        <a href="Clearlake Audit.dc.html#szabvanyok" style="color:#28345f;display:flex;align-items:center;gap:5px;white-space:nowrap"><span data-i18n="nav_std">Szabványok</span> <span style="font-size:10px;transform:{{ megaArrow }};transition:transform .25s;display:inline-block">▾</span></a>
+        <a href="index.html#szabvanyok" style="color:#28345f;display:flex;align-items:center;gap:5px;white-space:nowrap"><span data-i18n="nav_std">Szabványok</span> <span style="font-size:10px;transform:{{ megaArrow }};transition:transform .25s;display:inline-block">▾</span></a>
         <sc-if value="{{ megaOpen }}">
           <div style="position:absolute;top:74px;left:50%;transform:translateX(-50%);width:700px;background:#fff;border:1px solid rgba(16,25,59,.1);border-radius:16px;box-shadow:0 30px 70px -30px rgba(16,25,59,.45);padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:4px">
             <sc-for list="{{ standards }}" as="s" hint-placeholder-count="11">
@@ -45,20 +45,20 @@
           </div>
         </sc-if>
       </div>
-      <a href="Clearlake Audit.dc.html#folyamat" data-i18n="nav_proc" style="color:#28345f;padding:6px 0">Folyamat</a>
+      <a href="index.html#folyamat" data-i18n="nav_proc" style="color:#28345f;padding:6px 0">Folyamat</a>
       <a href="Rolunk.dc.html" data-i18n="nav_about" style="color:#28345f;padding:6px 0">Rólunk</a>
-      <a href="Clearlake Audit.dc.html#gyik" data-i18n="nav_faq" style="color:#28345f;padding:6px 0">GYIK</a>
+      <a href="index.html#gyik" data-i18n="nav_faq" style="color:#28345f;padding:6px 0">GYIK</a>
       <a href="Kapcsolat.dc.html" data-i18n="nav_contact" style="color:#22a7e6;padding:6px 0">Kapcsolat</a>
     </div>
     <button onClick="{{ toggleLang }}" style="flex:none;display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(16,25,59,.18);border-radius:999px;padding:7px 13px;font:600 13px/1 'Manrope';color:#1b2a63;cursor:pointer;letter-spacing:.04em" style-hover="border-color:#22a7e6;color:#22a7e6"><span style="width:7px;height:7px;border-radius:50%;background:#22a7e6"></span>{{ langLabel }}</button>
-    <a href="#urlap" data-i18n="nav_cta" style="flex:none;display:none;background:#1b2a63;color:#fff;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px" style-hover="background:#22a7e6" data-ctabtn>Ajánlatkérés</a>
+    <a href="#urlap" data-i18n="nav_cta" style="flex:none;display:none;background:#22a7e6;color:#06213a;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px" style-hover="background:#1b93cf" data-ctabtn>Ajánlatkérés</a>
     <button onClick="{{ toggleMobile }}" aria-label="Menü" style="flex:none;display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px" data-burger>
       <span style="width:24px;height:2px;background:#1b2a63;display:block"></span><span style="width:24px;height:2px;background:#1b2a63;display:block"></span><span style="width:24px;height:2px;background:#1b2a63;display:block"></span>
     </button>
   </nav>
   <sc-if value="{{ mobileOpen }}">
     <div style="border-top:1px solid rgba(16,25,59,.08);background:#fff;padding:14px 26px 20px;display:flex;flex-direction:column;gap:2px;max-height:70vh;overflow:auto">
-      <a href="Clearlake Audit.dc.html" style="padding:11px 0;font-weight:600;border-bottom:1px solid rgba(16,25,59,.06)">Főoldal</a>
+      <a href="index.html" style="padding:11px 0;font-weight:600;border-bottom:1px solid rgba(16,25,59,.06)">Főoldal</a>
       <sc-for list="{{ standards }}" as="s" hint-placeholder-count="11">
         <a href="{{ s.href }}" style="padding:10px 0;font-weight:600;font-size:14px;border-bottom:1px solid rgba(16,25,59,.05);display:flex;gap:10px"><span style="color:#22a7e6;width:70px">{{ s.short }}</span>{{ s.name }}</a>
       </sc-for>
@@ -69,13 +69,13 @@
 <!-- HERO -->
 <sc-if value="{{ isEn }}">
   <div style="background:#eef3fa;border-bottom:1px solid rgba(16,25,59,.08)">
-    <div style="max-width:1220px;margin:0 auto;padding:11px 26px;font-size:13px;color:#56617f;display:flex;gap:8px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#22a7e6;flex:none"></span>English version in progress — key sections are translated, detailed content is shown in Hungarian below.</div>
+    <div style="max-width:1220px;margin:0 auto;padding:11px 26px;font-size:13px;color:#56617f;display:flex;gap:8px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#22a7e6;flex:none"></span>Deutsche Version — die wichtigsten Inhalte sind übersetzt; Detailinhalte erscheinen auf Ungarisch.</div>
   </div>
 </sc-if>
 <section style="position:relative;background:radial-gradient(120% 130% at 82% 6%,#233a86 0%,#182a63 44%,#101c46 80%,#0c1638 100%);color:#eaf0fb;overflow:hidden;padding:66px 0 72px">
   <div style="position:relative;max-width:1220px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center" data-herogrid>
     <div>
-      <div data-reveal style="font-size:13px;color:#9fc4ee;margin-bottom:16px"><a href="Clearlake Audit.dc.html" style="color:#9fc4ee">Főoldal</a> <span style="opacity:.5">/</span> <span style="color:#e2edfb">Kapcsolat</span></div>
+      <div data-reveal style="font-size:13px;color:#9fc4ee;margin-bottom:16px"><a href="index.html" style="color:#9fc4ee">Főoldal</a> <span style="opacity:.5">/</span> <span style="color:#e2edfb">Kapcsolat</span></div>
       <h1 data-reveal style="font-family:'Marcellus',serif;font-weight:400;font-size:clamp(36px,5vw,62px);line-height:1.05;margin:0 0 18px">Beszéljünk a tanúsításról</h1>
       <p data-reveal style="font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:#cdddf3;max-width:700px;margin:0">Szeretné megtudni, milyen gyorsan és milyen költséggel szerezhető meg vállalkozása számára az ISO tanúsítvány? Kérjen kötelezettségmentes ajánlatot — válaszunk 1 munkanapon belül.</p>
     </div>
@@ -169,7 +169,7 @@
       </sc-for>
     </div>
     <div style="padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center">
-      <a href="Clearlake Audit.dc.html" style="display:inline-flex;background:#fff;padding:10px 14px;border-radius:10px"><img src="assets/clearlake-logo.png" alt="Clearlake Audit" style="height:34px;width:auto;display:block"/></a>
+      <a href="index.html" style="display:inline-flex;background:#fff;padding:10px 14px;border-radius:10px"><img src="assets/clearlake-logo.png" alt="Clearlake Audit" style="height:34px;width:auto;display:block"/></a>
       <span style="font-size:13px;color:#6c7ea8">© 2026 Clearlake Audit · Clearlake Consulting Kft.</span>
     </div>
   </div>
@@ -180,7 +180,7 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:820}}">
 class Component extends DCLogic {
   state = { mobileOpen:false, megaOpen:false, sent:false, lang:'hu' };
-  i18n = { nav_home:'Home', nav_about:'About', nav_std:'Standards', nav_proc:'Process', nav_faq:'FAQ', nav_contact:'Contact', nav_cta:'Get a quote' };
+  i18n = { nav_home:'Startseite', nav_about:'Über uns', nav_faq:'FAQ', nav_std:'Normen', nav_proc:'Ablauf', nav_faq:'FAQ', nav_contact:'Kontakt', nav_cta:'Angebot anfordern' };
   formRef = React.createRef();
   STANDARDS = [
     {short:'9001', full:'ISO 9001', name:'Minőségirányítás', href:'ISO 9001.dc.html'},
@@ -229,7 +229,7 @@ class Component extends DCLogic {
   renderVals(){
     return {
       standards:this.STANDARDS, megaOpen:this.state.megaOpen, megaArrow:this.state.megaOpen?'rotate(180deg)':'rotate(0deg)',
-      langLabel:this.state.lang==='en'?'EN':'HU', isEn:this.state.lang==='en', toggleLang:this.toggleLang,
+      langLabel:this.state.lang==='en'?'DE':'HU', isEn:this.state.lang==='en', toggleLang:this.toggleLang,
       mobileOpen:this.state.mobileOpen, openMega:this.openMega, closeMega:this.closeMega, toggleMobile:this.toggleMobile,
       sent:this.state.sent, notSent:!this.state.sent, onSubmit:this.onSubmit, formRef:this.formRef
     };

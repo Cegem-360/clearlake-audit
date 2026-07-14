@@ -33,11 +33,12 @@
 <!-- ============ NAV ============ -->
 <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,25,59,.08)">
   <nav style="max-width:1220px;margin:0 auto;padding:0 26px;height:76px;display:flex;align-items:center;gap:28px">
-    <a href="Clearlake Audit.dc.html" style="display:flex;align-items:center;flex:none" aria-label="Clearlake Audit">
+    <a href="index.html" style="display:flex;align-items:center;flex:none" aria-label="Clearlake Audit">
       <img src="assets/clearlake-logo.png" alt="Clearlake Audit" style="height:52px;width:auto;display:block"/>
     </a>
     <div style="flex:1"></div>
     <div style="display:none;gap:15px;align-items:center;font-size:14px;font-weight:600;letter-spacing:.01em" data-desktopnav>
+      <a href="index.html" data-i18n="nav_home" style="color:#28345f;padding:6px 0">Főoldal</a>
       <div style="position:relative;padding:26px 0" onMouseEnter="{{ openMega }}" onMouseLeave="{{ closeMega }}">
         <a href="#szabvanyok" data-i18n="nav_std" style="color:#28345f;display:flex;align-items:center;gap:5px">Szabványok <span style="font-size:10px;transform:{{ megaArrow }};transition:transform .25s;display:inline-block">▾</span></a>
         <sc-if value="{{ megaOpen }}">
@@ -48,7 +49,6 @@
           </div>
         </sc-if>
       </div>
-      <a href="#miert" data-i18n="nav_why" style="color:#28345f;padding:6px 0">Miért mi</a>
       <a href="#folyamat" data-i18n="nav_proc" style="color:#28345f;padding:6px 0">Folyamat</a>
       <a href="Rolunk.dc.html" data-i18n="nav_about" style="color:#28345f;padding:6px 0">Rólunk</a>
       <a href="#gyik" data-i18n="nav_faq" style="color:#28345f;padding:6px 0">GYIK</a>
@@ -57,7 +57,7 @@
     <button onClick="{{ toggleLang }}" style="flex:none;display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(16,25,59,.18);border-radius:999px;padding:7px 13px;font:600 13px/1 'Manrope';color:#1b2a63;cursor:pointer;letter-spacing:.04em" style-hover="border-color:#22a7e6;color:#22a7e6">
       <span style="width:7px;height:7px;border-radius:50%;background:#22a7e6"></span>{{ langLabel }}
     </button>
-    <a href="Ajanlatkeres.dc.html" data-i18n="nav_cta" style="flex:none;display:none;background:#1b2a63;color:#fff;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.01em;box-shadow:0 10px 24px -12px rgba(27,42,99,.9)" style-hover="background:#22a7e6;transform:translateY(-1px)" data-ctabtn>Ajánlatkérés</a>
+    <a href="Ajanlatkeres.dc.html" data-i18n="nav_cta" style="flex:none;display:none;background:#22a7e6;color:#06213a;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px" style-hover="background:#1b93cf;transform:translateY(-1px)" data-ctabtn>Ajánlatkérés</a>
     <button onClick="{{ toggleMobile }}" aria-label="Menü" style="flex:none;display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px" data-burger>
       <span style="width:24px;height:2px;background:#1b2a63;display:block"></span>
       <span style="width:24px;height:2px;background:#1b2a63;display:block"></span>
@@ -80,7 +80,7 @@
   <div style="background:#eef3fa;border-bottom:1px solid rgba(16,25,59,.08);padding:0">
     <div style="max-width:1220px;margin:0 auto;padding:11px 26px;font-size:13px;color:#56617f;display:flex;gap:8px;align-items:center">
       <span style="width:6px;height:6px;border-radius:50%;background:#22a7e6;flex:none"></span>
-      English version in progress — key sections are translated, detailed content is shown in Hungarian below.
+      Deutsche Version — die Hauptinhalte sind übersetzt; Detailseiten können teilweise auf Ungarisch erscheinen.
     </div>
   </div>
 </sc-if>
@@ -408,39 +408,40 @@ class Component extends DCLogic {
   ];
 
   i18n = {
-    nav_std:'Standards', nav_why:'Why us', nav_proc:'Process', nav_faq:'FAQ', nav_contact:'Contact', nav_cta:'Get a quote',
-    hero_kicker:'Accredited ISO certification',
-    hero_h1:'Internationally recognised ISO certification for companies',
-    hero_sub:'With more than 10 years of audit experience and hundreds of successful audits, we support our clients through the entire certification process — in Hungary and across Europe.',
-    hero_word1:'Quality', hero_word2:'Security', hero_word3:'Reliability',
-    hero_cta1:'Request a quote today', hero_cta2:'Our standards',
-    stat1:'years of audit experience', stat2:'successful audits completed', stat3:'certifiable standards', stat4:'international accreditation',
-    why_kicker:'Why does ISO certification matter?', why_h:'No longer an advantage — a business expectation',
-    why_p:'Customers, partners and public tenders increasingly require certified management systems. An internationally recognised ISO certificate proves that your organisation operates with controlled processes, manages risks and is committed to continuous improvement.',
-    std_kicker:'Our services', std_h:'Which standards can we help with?', std_p:'Accredited certification for the most important international management system standards. Click for details.',
-    wu_kicker:'Why choose us?', wu_h:'Experience you can build on',
-    wu1_h:'10+ years of experience', wu1_p:'Our auditors have completed hundreds of successful audits across industries.',
-    wu2_h:'International experience', wu2_p:'Construction, manufacturing, IT, logistics, facility management, trade and healthcare.',
-    wu3_h:'Accredited certificates', wu3_p:'Certificates issued by our partners are internationally recognised and accepted worldwide.',
-    wu4_h:'Integrated audits', wu4_p:'Auditing multiple standards at once delivers significant cost and time savings.',
-    pr_kicker:'The certification process', pr_h:'From first contact to certificate',
-    pr1_h:'Contact', pr1_p:'We get to know your company and certification goals.',
-    pr2_h:'Quotation', pr2_p:'We prepare a tailored offer.',
-    pr3_h:'Audit planning', pr3_p:'We agree on the audit details and timing.',
-    pr4_h:'Stage 1 audit', pr4_p:'Review of documentation and readiness.',
-    pr5_h:'Stage 2 audit', pr5_p:'Evaluation of the system in practice.',
-    pr6_h:'Certificate issued', pr6_p:'On a successful audit, the certificate is issued.',
-    pr7_h:'Surveillance audits', pr7_p:'Valid for 3 years with annual surveillance audits.',
-    pr_cta_h:"Let's start together", pr_cta_b:'Get a quote →',
-    pc_kicker:'Pricing', pc_h:'How much does ISO certification cost?',
-    pc_p:'The cost depends on several factors, so every quote is prepared individually — at a transparent, no-obligation price.',
-    pc_cta:'Request a free quote',
-    pc_f1:'Number of employees', pc_f2:'Number of sites', pc_f3:'Scope of activity', pc_f4:'Chosen standard', pc_f5:'Number of integrated audits',
-    fq_kicker:'FAQ', fq_h:'Frequently asked questions',
-    ct_kicker:'Contact', ct_h:'Request a no-obligation quote',
-    ct_p:'Want to know how quickly and at what cost your company can obtain an ISO certificate? Get in touch with us today.',
-    ft_p:'Accredited ISO certification for companies in Hungary and across Europe. More than 10 years of audit experience.',
-    ft_c1:'Standards', ft_c2:'Navigation', ft_tag:'Quality · Security · Reliability'
+    nav_home:'Startseite', nav_about:'Über uns',
+    nav_std:'Normen', nav_why:'Warum wir', nav_proc:'Ablauf', nav_faq:'FAQ', nav_contact:'Kontakt', nav_cta:'Angebot anfordern',
+    hero_kicker:'Akkreditierte ISO-Zertifizierung',
+    hero_h1:'ISO-Zertifizierung für Deutschland, Österreich und die Schweiz',
+    hero_sub:'Über zehn Jahre Audit-Erfahrung und hunderte erfolgreich begleitete Betriebe: Wir führen Ihr Unternehmen ohne Umwege zum offiziellen Zertifikat — hocheffizient, rechtssicher und ohne bürokratischen Wasserkopf.',
+    hero_word1:'Qualität', hero_word2:'Sicherheit', hero_word3:'Verlässlichkeit',
+    hero_cta1:'Jetzt Angebot anfordern', hero_cta2:'Unsere Normen',
+    stat1:'Jahre Audit-Erfahrung', stat2:'erfolgreich begleitete Betriebe', stat3:'zertifizierbare Normen', stat4:'internationale Akkreditierung',
+    why_kicker:'Warum sich der Aufwand auszahlt', why_h:'Kein Vorteil mehr — die harte Eintrittskarte',
+    why_p:'Ein zertifiziertes Managementsystem ist heute weit mehr als ein Dokument für die Wand. In vielen Branchen ist es die Eintrittskarte für internationale Lieferketten, Großkunden und langfristige B2B-Beziehungen — es belegt feste Strukturen, vorausschauendes Risikomanagement und kontinuierliche Verbesserung.',
+    std_kicker:'Unsere Leistungen', std_h:'Bei welchen Normen wir Sie begleiten', std_p:'Akkreditierte Zertifizierung für die wichtigsten internationalen Managementsystem-Normen. Klicken Sie für Details.',
+    wu_kicker:'Warum mit uns?', wu_h:'Erfahrung, auf die Sie bauen können',
+    wu1_h:'10+ Jahre Erfahrung', wu1_p:'Unsere Auditoren haben hunderte Audits in den verschiedensten Branchen erfolgreich abgeschlossen.',
+    wu2_h:'Branchenübergreifend', wu2_p:'Bauwesen, Industrie und Fertigung, IT, Logistik, Facility Management, Handel und Gesundheitswesen.',
+    wu3_h:'Akkreditierte Zertifikate', wu3_p:'Die Urkunden laufen über staatlich akkreditierte Prüfstellen und werden weltweit akzeptiert.',
+    wu4_h:'Integrierte Audits', wu4_p:'Mehrere Normen in einem einzigen Auditverfahren — das spart Papierkram, Zeit und Kosten.',
+    pr_kicker:'Der Weg zum Zertifikat', pr_h:'In 7 Schritten ans Ziel',
+    pr1_h:'Erstkontakt', pr1_p:'Sie teilen uns kurz mit, wo Ihr Unternehmen steht und welche Norm Sie anstreben.',
+    pr2_h:'Angebot', pr2_p:'Sie erhalten eine transparente, auf Ihre Betriebsgröße zugeschnittene Preiskalkulation.',
+    pr3_h:'Planung', pr3_p:'Wir stimmen die Audit-Termine flexibel mit Ihrem Betriebskalender ab.',
+    pr4_h:'Dokumentenprüfung (Stage 1)', pr4_p:'Wir prüfen Ihre Unterlagen vorab, damit es keine bösen Überraschungen gibt.',
+    pr5_h:'Vor-Ort-Audit (Stage 2)', pr5_p:'Der Auditor prüft die praktische Umsetzung der Prozesse direkt bei Ihnen.',
+    pr6_h:'Urkunde', pr6_p:'Nach erfolgreichem Abschluss stellt die akkreditierte Stelle Ihr Zertifikat aus.',
+    pr7_h:'Überwachung', pr7_p:'Jährliche kurze Überwachungsaudits sichern die dauerhafte Wirksamkeit.',
+    pr_cta_h:'Lassen Sie uns gemeinsam starten', pr_cta_b:'Angebot anfordern →',
+    pc_kicker:'Preise', pc_h:'Was kostet eine ISO-Zertifizierung?',
+    pc_p:'Die Kosten hängen von Mitarbeiterzahl, Standorten, Branche und kombinierten Audits ab — jedes Angebot wird individuell und unverbindlich kalkuliert.',
+    pc_cta:'Kostenloses Angebot anfordern',
+    pc_f1:'Mitarbeiterzahl', pc_f2:'Standorte', pc_f3:'Tätigkeitsbereich', pc_f4:'Gewählte Norm', pc_f5:'Anzahl kombinierter Audits',
+    fq_kicker:'FAQ', fq_h:'Häufige Fragen',
+    ct_kicker:'Kontakt', ct_h:'Fordern Sie ein unverbindliches Angebot an',
+    ct_p:'Möchten Sie wissen, wie schnell und zu welchen Kosten Ihr Unternehmen ein ISO-Zertifikat erhält? Schreiben Sie uns — wir melden uns kurzfristig.',
+    ft_p:'Akkreditierte ISO-Zertifizierung für Unternehmen in Deutschland, Österreich und der Schweiz. Über zehn Jahre Audit-Erfahrung.',
+    ft_c1:'Normen', ft_c2:'Navigation', ft_tag:'Qualität · Sicherheit · Verlässlichkeit'
   };
 
   faqData = [
@@ -451,11 +452,11 @@ class Component extends DCLogic {
     { q:'Több szabvány auditálható egyszerre?', a:'Igen, integrált audit keretében több szabvány is tanúsítható, ami idő- és költségmegtakarítást jelent.' }
   ];
   faqEn = [
-    { q:'How long does ISO certification take?', a:'In most cases 4–8 weeks, depending on the readiness of the organisation.' },
-    { q:'Is a consultant required?', a:'No, certification can be obtained without a consultant.' },
-    { q:'How long is the certificate valid?', a:'Three years, with annual surveillance audits.' },
-    { q:'Is the certificate internationally accepted?', a:'Yes, accredited certificates are accepted worldwide.' },
-    { q:'Can multiple standards be audited at once?', a:'Yes, several standards can be certified in an integrated audit, saving time and cost.' }
+    { q:'Wie lange dauert eine ISO-Zertifizierung?', a:'In den meisten Fällen zwischen vier und acht Wochen.' },
+    { q:'Benötigen wir einen Berater?', a:'Nein. Eine Zertifizierung kann auch ohne externe Beratung durchgeführt werden.' },
+    { q:'Wie lange ist das Zertifikat gültig?', a:'Drei Jahre mit jährlichen Überwachungsaudits.' },
+    { q:'Werden die Zertifikate international anerkannt?', a:'Ja. Zertifikate akkreditierter Zertifizierungsstellen werden weltweit akzeptiert.' },
+    { q:'Können mehrere Standards gleichzeitig zertifiziert werden?', a:'Ja. Kombi-Audits reduzieren Aufwand und Kosten massiv.' }
   ];
 
   componentDidMount() {
@@ -573,7 +574,7 @@ class Component extends DCLogic {
       };
     });
     return {
-      langLabel: en ? 'EN' : 'HU',
+      langLabel: en ? 'DE' : 'HU',
       isEn: en,
       standards: this.STANDARDS,
       megaOpen: this.state.megaOpen,
